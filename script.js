@@ -1,20 +1,20 @@
 let item=[{   
-        ques:"1assadl;ld  loremdasjbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkfsd csdoa;fiosn c soihaasa  n   ln  o;  b   biulb   biu lb  bui;b   l,b ui;b        iub l   lkui    nb  l   b   aslkjdlka;s     jlk jl;j    lkjlk   jklqwj  ;lj i   jq w    jqiow;  qb kjsBIUl  be lh OHLb il   B N klb BL  ,",
-        ans:"1asd",
-        wrans:"asdas",
-        key:"ajax"
+        ques:"REMEMBER<br><div>There are many programming languages like c, c++, python whereas HTML and CSS are not one of them; these languages are known as scripting languages as they need not be compiled for execution.</div><div>These languages are called SCRIPTING LANGUAGES. while HTML creates the structure, CSS creates the style and Js gives action to the webpage.</div><div>Background: red; changes background to red.</div>Color: red; changes text color to red.",
+        ans:"HTML, CSS",
+        wrans:"C++, python ",
+        key:"basic computer essential knowledge"
     },
     {
-        ques:"1assadl;ld  loremdasjbkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkfsd csdoa;fiosn c soihaasa  n   ln  o;  b   biulb   biu lb  bui;b   l,b ui;b        iub l   lkui    nb  l   b   aslkjdlka;s     jlk jl;j    lkjlk   jklqwj  ;lj i   jq w    jqiow;  qb kjsBIUl  be lh OHLb il   B N klb BL  ,",
-        ans:"2asdasd",
-        wrans:"asdas",
-        key:"ajax2"
+        ques:"UNDERSTAND<div>There has been a situation in your company, the STRUCTURE of one of the client’s websites have been facing some issues and the website is not working as it should, due to which your client is not satisfied.</div><div>Q. what do you think the problem is?</div>",
+        ans:"HTML",
+        wrans:"CSS",
+        key:"scripting language Understanding"
     },
     {
-        ques:"3asdasf",
-        ans:"3asdasd",
-        wrans:"asdas",
-        key:"ajax3"
+        ques:"APPLY <div>after a thorough investigation the team found out that the background color of the website was creating a problem as the syntax for background was not properly written. The client also requested to change the color of the text to white and font-size to 20px.</div>",
+        ans:"Font-size:20px;",
+        wrans:"font size to 20px",
+        key:"problem solving"
     },
     {
         ques:"4asdasf",
@@ -42,9 +42,11 @@ const enteredkey=document.querySelector(".entered-key");
 const scoreclass=document.querySelector(".Score");
 const popupcongo =document.querySelector(".popup-congo");
 const popuperror =document.querySelector(".popup-error");
+const endscore=document.querySelector(".endscore")
+const gameend=document.querySelector(".game-end")
 
 function updatescore(){
-    scoreclass.innerText=(score);
+    scoreclass.innerText=(score/10);
 }
 function setoption()
 {
@@ -53,12 +55,18 @@ function setoption()
 
     if(op==0)
     {
-        option1.innerText= ques[activequestion].ans;
-        option2.innerText= ques[activequestion].wrans;
+        option1.innerText="";
+        option1.insertAdjacentHTML("beforeEnd",ques[activequestion].ans);
+        option2.innerText="";
+        option2.insertAdjacentHTML("beforeEnd",ques[activequestion].wrans);
+
     }
     else{
-        option1.innerText= ques[activequestion].wrans;
-        option2.innerText= ques[activequestion].ans;
+        option2.innerText="";
+        option2.insertAdjacentHTML("beforeEnd",ques[activequestion].ans);
+        option1.innerText="";
+        option1.insertAdjacentHTML("beforeEnd",ques[activequestion].wrans);
+
     }
 }
 
@@ -73,7 +81,8 @@ function setrewardandlession(){
 }
 
 function setquesion(){
-    question.innerText=ques[activequestion].ques;
+    question.innerText="";
+    question.insertAdjacentHTML("beforeend",ques[activequestion].ques);
 }
 
 setquesion();
@@ -92,6 +101,10 @@ function checkans(option){
         score=score+10;
         updatescore()
         setrewardandlession();
+        if(solved==2){
+            gameend.setAttribute("style","display:block;")
+            endscore.innerText=(`Your final score is : ${score}`);
+        }
         option.setAttribute("style", "background-color: green;");  
 
         popupcongo.setAttribute("style","display:block")

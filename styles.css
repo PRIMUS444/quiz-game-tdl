@@ -20,6 +20,41 @@ body{
       opacity: 60%;
     }
   }
+  .game-end{
+    position: absolute;
+    top:1px;
+    width:38%;
+    height:50%;
+    top:25%;
+    left:15%;
+    backdrop-filter:blur(20px);
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.456);
+    z-index: 999;
+    display: none;
+  }
+  .playagain{
+    cursor: pointer;
+    padding:10%;
+    width:20%;
+    justify-content: center;
+    margin:0 auto 0 auto;
+    background: -webkit-linear-gradient(left,#ed371b,#dcf426ee,#62ffda,#627fff,#ff62be);
+    text-align: center;
+    font-size: 150%;
+    border-radius: 5px;
+    animation-duration: 10s;
+    animation-name: animationgradienttitle;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    
+  }
+
+.endscore{
+    padding:8%;
+    font-size: 150%;
+}
   .popup-congo{
     position: absolute;
     top:1px;
@@ -121,7 +156,12 @@ body{
  padding:3%;
  box-sizing: border-box;
  transition: 1s fadein ;
+ overflow: scroll;
 }
+.question::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+  }
 .answers{
     display:flex;
     justify-content: center;
@@ -136,6 +176,7 @@ body{
     border-radius:5px;
     border:2px solid black;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .option1:hover,.option2:hover{
