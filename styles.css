@@ -1,0 +1,201 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color:white;
+    font-family: 'Roboto', sans-serif;}
+
+@keyframes animationgradienttitle {
+    0% {
+        background-position: 0 1600px;
+    }
+    100% {
+        background-position: 1600px 0;
+    }
+  }
+  @keyframes blinker {
+    80% {
+      opacity: 60%;
+    }
+  }
+  .popup-congo{
+    position: absolute;
+    top:1px;
+    width:100%;
+    z-index: 999;
+    display: none;
+    transition: 1s;
+  }
+  .popup-error{
+    position: absolute;
+    top:50%;
+    left:23.5%;
+    font-size: 150%;
+    font-weight: bold;
+    color:red;
+    z-index: 999;
+    animation: blinker 1s linear infinite;
+    background-color: #fdfdfdfc;
+    padding:2%;
+    display:none;
+    transition: 1s;
+  }
+
+.title{
+    position: absolute;
+    margin: 1% 20%;
+    background-color: rgba(240, 248, 255, 0.566);
+    box-shadow: 2px 2px rgb(190, 186, 186);
+    padding:1.5%;
+    font-size: 120%;
+    letter-spacing: 2px;
+    backdrop-filter: blur(40px);
+    border-radius: .5cm;
+    font-weight: 500;
+}
+
+.title span{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 200%;
+    letter-spacing: 8px;
+    font-weight: 1000;
+    background: -webkit-linear-gradient(left,#475262,#d55252,#10DDC2);
+    background-size: 1600px 200px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-duration: 3s;
+    animation-name: animationgradienttitle;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    
+}
+.score-heading{
+    position: absolute;
+    margin: 2% 65%;
+    width: 8%;
+    background-color: rgba(240, 248, 255, 0.566);
+    box-shadow: 2px 2px rgb(190, 186, 186);
+    padding:1.5%;
+    font-size: 120%;
+    letter-spacing: 2px;
+    backdrop-filter: blur(40px);
+    border-radius: .5cm;
+    font-weight: 500;
+}
+.container{
+    position: absolute;
+    width:80%;
+    height: 80%;
+    top:18%;
+    left:10%;
+    margin:0 auto;
+    background-color: rgba(0, 0, 0, 0.693);
+    display: flex;
+    border: solid 1px white;
+    backdrop-filter: blur(40px);
+    border-radius: .5cm
+
+}
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    margin:2% auto;
+    background-color: rgba(48, 44, 44, 0.679);
+    width:54%;
+    border: solid 3px white;
+    backdrop-filter: blur(40px);
+    border-radius: .5cm;
+    padding:5%;
+    box-sizing: border-box;
+}
+.question{
+ width:98%;
+ height:65%;
+ background-color: #abb7b591;
+ border:2px solid black;
+ border-radius:5px;
+ margin-bottom: 8%;
+ padding:3%;
+ box-sizing: border-box;
+ transition: 1s fadein ;
+}
+.answers{
+    display:flex;
+    justify-content: center;
+}
+.option1,.option2{
+
+    width:40%;
+    height:120%;
+    margin:2% auto;
+    padding:2%;
+    background-color: rgba(113, 107, 107, 0.538);
+    border-radius:5px;
+    border:2px solid black;
+    box-sizing: border-box;
+}
+
+.option1:hover,.option2:hover{
+    background-color: green;
+    transition: 1s;
+}
+.next-question{
+position:absolute;
+top: 92%;
+}
+.enter-key{
+    position:absolute;
+    top:16%;
+    left:8%;
+    width:40%;
+    height:40%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(153, 162, 162, 0.614);
+    backdrop-filter: blur(40px);
+    border-radius: 5px;
+    border: 2px black solid;
+    z-index: 999;
+    display:none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.enter-key>div{
+    padding: 10px;
+    margin-top:20px;
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    margin:2% auto;
+    width:40%
+}
+
+.section2>div{
+    margin:1% auto;
+    background-color: rgba(51, 49, 49, 0.638);
+    width:98%;
+    height:49%;
+    border: solid 3px white;
+    backdrop-filter: blur(40px);
+    border-radius: .5cm;
+    padding:5%;
+    box-sizing: border-box;
+}
+
+.rewards{
+    padding:2%;
+    box-sizing: border-box;
+}
+
+.lessons{
+    padding:2%;
+    box-sizing: border-box;
+}
+
+.lesson-heading{
+    overflow: scroll;
+}
