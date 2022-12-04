@@ -47,6 +47,7 @@ const popupcongo =document.querySelector(".popup-congo");
 const popuperror =document.querySelector(".popup-error");
 const endscore=document.querySelector(".endscore")
 const gameend=document.querySelector(".game-end")
+const closebtn=document.querySelector(".closebtn")
 
 function updatescore(){
     scoreclass.innerText=(score/10);
@@ -73,6 +74,9 @@ function setoption()
     }
 }
 
+function closeenterkey(){
+    nextquestion.setAttribute("style","display: none;") 
+}
 
 function setrewardandlession(){
     rewardsclass.innerHTML="";
