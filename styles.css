@@ -3,7 +3,9 @@ body{
     margin: 0;
     box-sizing: border-box;
     color:white;
-    font-family: 'Roboto', sans-serif;}
+    font-family: 'Roboto', sans-serif;
+}
+
 
 @keyframes animationgradienttitle {
     0% {
@@ -196,6 +198,10 @@ top: 92%;
     box-sizing: border-box;
 }
 
-.lesson-heading{
+.lessons-heading{
     overflow: scroll;
 }
+.lessons-heading::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+  }
