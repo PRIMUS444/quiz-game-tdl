@@ -2,21 +2,21 @@ let item=[{
         ques:"REMEMBER<br><div>There are many programming languages like c, c++, python whereas HTML and CSS are not one of them; these languages are known as scripting languages as they need not be compiled for execution.</div><div>These languages are called SCRIPTING LANGUAGES. while HTML creates the structure, CSS creates the style and Js gives action to the webpage.</div><div>Background: red; changes background to red.</div>Color: red; changes text color to red.",
         ans:"HTML, CSS",
         wrans:"C++, python ",
-        reward:"basic computer essential knowledge, key 1 : ajax",
+        reward:"book for basic knowledge of computer essential, key 1 : ajax",
         key:"ajax"
     },
     {
         ques:"UNDERSTAND<div>There has been a situation in your company, the STRUCTURE of one of the client’s websites have been facing some issues and the website is not working as it should, due to which your client is not satisfied.</div><div>Q. what do you think the problem is?</div>",
         ans:"HTML",
         wrans:"CSS",
-        reward:"scripting language Understanding, key 2 : font-size",
+        reward:"free cloud Membership for hosting platform, key 2 : font-size",
         key:"font-size"
     },
     {
         ques:"APPLY <div>after a thorough investigation the team found out that the background color of the website was creating a problem as the syntax for background was not properly written. The client also requested to change the color of the text to white and font-size to 20px.</div>",
         ans:"Font-size:20px;",
         wrans:"font size to 20px",
-        reward:"problem solving , key 3 : 20px;",
+        reward:"Udemy course for basic scripting language knowledge and applications, key 3 : 20px;",
         key:"20px;"
     },
     {
@@ -47,7 +47,6 @@ const popupcongo =document.querySelector(".popup-congo");
 const popuperror =document.querySelector(".popup-error");
 const endscore=document.querySelector(".endscore")
 const gameend=document.querySelector(".game-end")
-const closebtn=document.querySelector(".closebtn")
 
 function updatescore(){
     scoreclass.innerText=(score/10);
@@ -74,9 +73,6 @@ function setoption()
     }
 }
 
-function closeenterkey(){
-    nextquestion.setAttribute("style","display: none;") 
-}
 
 function setrewardandlession(){
     rewardsclass.innerHTML="";
